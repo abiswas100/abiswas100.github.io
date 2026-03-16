@@ -538,6 +538,14 @@ h1, h2, h3, h4 {
   letter-spacing: 0.02em;
 }
 
+.research-card__links {
+  margin-top: 1.2rem;
+}
+
+.research-card__links .btn {
+  font-size: 0.78rem;
+}
+
 /* ---------- Projects ---------- */
 .project-grid {
   display: grid;
@@ -655,6 +663,16 @@ h1, h2, h3, h4 {
   color: #27ae60;
 }
 
+.pub-item__type--workshop {
+  background: rgba(142, 68, 173, 0.1);
+  color: #8e44ad;
+}
+
+.pub-item__type--submitted {
+  background: rgba(230, 126, 34, 0.1);
+  color: #e67e22;
+}
+
 .pub-item h3 {
   font-size: 1.05rem;
   font-weight: 600;
@@ -679,6 +697,135 @@ h1, h2, h3, h4 {
 .pub-item__links {
   display: flex;
   gap: 0.6rem;
+}
+
+.pub-review {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(26, 82, 118, 0.04);
+  border-radius: 10px;
+  border: 1px solid rgba(26, 82, 118, 0.08);
+}
+
+.pub-review h4 {
+  font-size: 0.95rem;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.pub-review h4 i {
+  color: var(--blue-accent);
+  margin-right: 0.4rem;
+}
+
+.pub-review p {
+  font-size: 0.88rem;
+  color: var(--gray-dark);
+  line-height: 1.65;
+}
+
+/* ---------- Research Impact ---------- */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.impact-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.8rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.05);
+  transition: all var(--transition);
+  text-align: center;
+}
+
+.impact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(10, 22, 40, 0.1);
+}
+
+.impact-card__number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--blue-accent);
+  line-height: 1.1;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.02em;
+}
+
+.impact-card__label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.7rem;
+}
+
+.impact-card p {
+  font-size: 0.82rem;
+  color: var(--gray-mid);
+  line-height: 1.55;
+}
+
+/* ---------- Technical Skills ---------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.skills-card {
+  background: #f7f9fc;
+  border-radius: 12px;
+  padding: 1.8rem;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all var(--transition);
+}
+
+.skills-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(10, 22, 40, 0.08);
+}
+
+.skills-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(26, 82, 118, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--blue-accent);
+}
+
+.skills-card h3 {
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.skills-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-card ul li {
+  font-size: 0.85rem;
+  color: var(--gray-dark);
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  line-height: 1.5;
+}
+
+.skills-card ul li:last-child {
+  border-bottom: none;
 }
 
 /* ---------- Experience ---------- */
@@ -995,11 +1142,13 @@ h1, h2, h3, h4 {
   }
 
   .research-grid,
-  .project-grid {
+  .project-grid,
+  .impact-grid {
     grid-template-columns: 1fr;
   }
 
-  .edu-grid {
+  .edu-grid,
+  .skills-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1020,7 +1169,13 @@ h1, h2, h3, h4 {
 
   .research-card,
   .project-card__body,
-  .edu-card {
+  .edu-card,
+  .impact-card,
+  .skills-card {
     padding: 1.4rem;
+  }
+
+  .impact-card__number {
+    font-size: 1.8rem;
   }
 }
