@@ -952,6 +952,63 @@ h1, h2, h3, h4 {
   line-height: 1.6;
 }
 
+/* ---------- Service & Outreach ---------- */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+.service-card {
+  background: #f7f9fc;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(10, 22, 40, 0.08);
+}
+
+.service-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(26, 82, 118, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--blue-accent);
+}
+
+.service-card h3 {
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-card ul li {
+  font-size: 0.88rem;
+  color: var(--gray-dark);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  line-height: 1.55;
+}
+
+.service-card ul li:last-child {
+  border-bottom: none;
+}
+
 /* ---------- Contact ---------- */
 .contact {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 40%, var(--blue) 100%);
@@ -1148,7 +1205,8 @@ h1, h2, h3, h4 {
   }
 
   .edu-grid,
-  .skills-grid {
+  .skills-grid,
+  .service-grid {
     grid-template-columns: 1fr;
   }
 
