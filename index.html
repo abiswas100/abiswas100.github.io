@@ -60,10 +60,11 @@
       <span class="hero__label">PhD Researcher &bull; Wireless Systems</span>
       <h1 class="hero__name">Avhishek Biswas</h1>
       <p class="hero__title">
-        I design next-generation wireless systems for 5G and 6G networks, focusing on
-        millimeter-wave communication, beamforming, and wireless channel modeling. My work
-        combines real-world RF testbeds, signal processing, and machine learning to build
-        reliable high-frequency wireless systems for vehicular and agricultural environments.
+        My research focuses on experimental wireless systems for 5G and 6G networks,
+        including mmWave beamforming, wireless channel sounding, and AI-assisted beam
+        management. I design real-world RF testbeds using SDRs and phased arrays, and
+        conduct large-scale wireless measurement campaigns to study propagation and improve
+        beam alignment in vehicular and agricultural environments.
       </p>
       <p class="hero__affiliation">
         University of Nebraska&ndash;Lincoln &middot;
@@ -106,21 +107,22 @@
             <a href="https://cpn.unl.edu" target="_blank" rel="noopener">Cyber Physical Networking (CPN) Lab</a>
             at the University of Nebraska&ndash;Lincoln, advised by
             <a href="https://cse.unl.edu/~mcvuran/" target="_blank" rel="noopener">Dr. Mehmet Can Vuran</a>.
-            My research focuses on environment-adaptive mobile wireless systems for 6G,
-            with channel modeling and beam management across rural and urban environments.
+            My research focuses on building environment-adaptive wireless systems for 6G
+            networks&mdash;from designing RF testbeds and conducting field measurement
+            campaigns to developing channel models and beam management algorithms.
           </p>
           <p>
-            I design and build experimental testbeds using software-defined radios (USRP X300/B200)
-            and 60&nbsp;GHz phased arrays, develop wideband channel sounding systems with
-            Zadoff&ndash;Chu sequences, and investigate camera-primed beam management strategies
-            for vehicular mmWave networks. My work bridges the gap between theoretical channel
-            models and real-world propagation measurements collected across agricultural
-            fields, rural highways, and indoor environments.
+            I have collected over 31,600 mmWave propagation measurements across agricultural
+            environments, built wideband channel sounders using USRP X300 radios and
+            Zadoff&ndash;Chu correlation pipelines, and developed a camera-primed beam
+            alignment framework (ViBe) that outperforms 5G NR hierarchical beamforming
+            in vehicular experiments. My testbeds integrate 60&nbsp;GHz phased arrays,
+            sub-6&nbsp;GHz SDR platforms, and GPU-accelerated signal processing.
           </p>
           <p>
             I am targeting <strong>research engineer</strong> and <strong>RF engineering</strong> roles
-            where I can apply my expertise in wireless system design, signal processing,
-            and data-driven optimization to build next-generation communication systems.
+            where I can apply hands-on experience in wireless system design, propagation
+            measurement, and data-driven optimization to real-world communications challenges.
           </p>
           <div class="about__interests">
             <h4>Research Interests</h4>
@@ -303,7 +305,7 @@
   <section class="section section--alt" id="projects">
     <div class="container">
       <h2 class="section-title fade-in">Selected Projects</h2>
-      <p class="section-subtitle fade-in">From experimental wireless systems to software applications</p>
+      <p class="section-subtitle fade-in">Systems built for real-world wireless experimentation</p>
       <div class="project-grid">
 
         <div class="project-card fade-in">
@@ -313,11 +315,13 @@
           <div class="project-card__body">
             <h3>Wireless Testbed &amp; Experimental Infrastructure</h3>
             <p>
-              Built mmWave (60&nbsp;GHz) and sub-6&nbsp;GHz testbeds integrating phased arrays,
-              USRP X300/B200 radios, power amplifiers, low-noise amplifiers, bandpass filters,
-              and GPS-disciplined oscillator synchronization hardware. Developed custom beam-sweeping,
-              real-time acquisition, GPU-accelerated correlation, and automated post-processing
-              workflows for SNR, path-loss exponent, RMS delay spread, and beam consistency analysis.
+              Designed and deployed mmWave (60&nbsp;GHz) and sub-6&nbsp;GHz experimental
+              testbeds for over-the-air wireless measurements. Hardware stack includes
+              phased-array mmWave radios, USRP X300/B200 SDR platforms, external PAs, LNAs,
+              bandpass filters, and GPSDO-synchronized clocking. Software stack includes
+              custom beam-sweeping control, real-time IQ acquisition, GPU-accelerated
+              Zadoff&ndash;Chu correlation (Python/CuPy), and automated extraction of SNR,
+              path-loss exponent, RMS delay spread, and beam consistency metrics.
             </p>
             <div class="project-card__tech">
               <span>USRP X300/B200</span>
@@ -340,11 +344,13 @@
           <div class="project-card__body">
             <h3>ViBe: Vision-Based Beamforming Framework</h3>
             <p>
-              Camera-primed double-directional beam management system for vehicular mmWave
-              communication. Combines camera priming, radio coordinate projection, beam
-              initialization, iterative SNR-driven refinement, and offset tracking to
-              achieve real-time V2X link establishment without exhaustive beam search or
-              offline RF training.
+              Camera-primed beam alignment framework for vehicular mmWave communication.
+              The system combines computer vision object detection, camera-to-radio geometric
+              coordinate projection, and iterative SNR-based beam refinement to reduce
+              exhaustive O(N&sup2;) beam search to constrained local sweeps. Achieves
+              1.1&ndash;1.4% outage rates in real-time vehicular experiments&mdash;lower than
+              both 5G NR hierarchical beamforming and end-to-end ML baselines. Hardware-agnostic
+              design requires no offline RF training data.
             </p>
             <div class="project-card__tech">
               <span>Python</span>
@@ -368,11 +374,12 @@
           <div class="project-card__body">
             <h3>Channel Sounding Signal Processing Pipeline</h3>
             <p>
-              End-to-end calibration and signal-processing framework for wideband channel
-              sounding data. Includes signal detection, coherent averaging, back-to-back
-              calibration, hardware deconvolution, calibrated CIR reconstruction, power
-              delay profile extraction, and path-loss regression&mdash;all GPU-accelerated
-              with Python/CuPy.
+              End-to-end Python framework for processing wideband channel sounding captures
+              from USRP radios. Pipeline stages: signal detection via correlation peak
+              thresholding, coherent averaging across snapshots, back-to-back system
+              calibration, hardware frequency-response deconvolution, calibrated CIR
+              reconstruction, power delay profile (PDP) extraction, and close-in / floating-intercept
+              path-loss regression. All compute-intensive stages are GPU-accelerated with CuPy.
             </p>
             <div class="project-card__tech">
               <span>Python</span>
@@ -524,15 +531,29 @@
 
         <div class="skills-card fade-in">
           <div class="skills-card__icon"><i class="fas fa-broadcast-tower"></i></div>
-          <h3>RF &amp; Wireless Systems</h3>
+          <h3>Wireless Systems</h3>
           <ul>
-            <li>Millimeter-wave systems</li>
+            <li>mmWave communication (28&ndash;71 GHz)</li>
             <li>Sub-6 GHz systems</li>
             <li>Beamforming &amp; beam management</li>
             <li>Channel sounding &amp; modeling</li>
-            <li>Vehicular communications</li>
+            <li>Propagation measurement campaigns</li>
+            <li>Vehicular (V2X) communications</li>
             <li>5G NR / 6G research</li>
-            <li>Software-defined radio</li>
+          </ul>
+        </div>
+
+        <div class="skills-card fade-in">
+          <div class="skills-card__icon"><i class="fas fa-microchip"></i></div>
+          <h3>RF Hardware &amp; SDR</h3>
+          <ul>
+            <li>USRP X300 / B200 radios</li>
+            <li>60 GHz phased-array antennas</li>
+            <li>Power amplifiers / LNAs</li>
+            <li>Bandpass filters</li>
+            <li>GPSDO clock synchronization</li>
+            <li>Over-the-air testbed deployment</li>
+            <li>Real-time IQ data acquisition</li>
           </ul>
         </div>
 
@@ -541,17 +562,17 @@
           <h3>Signal Processing</h3>
           <ul>
             <li>Wireless channel estimation</li>
-            <li>Propagation analysis</li>
-            <li>Synchronization &amp; correlation</li>
-            <li>mmWave beam management</li>
-            <li>Real-time measurement processing</li>
-            <li>PDP / CIR extraction</li>
+            <li>Zadoff&ndash;Chu correlation</li>
+            <li>CIR / PDP extraction</li>
+            <li>Path-loss &amp; delay spread analysis</li>
+            <li>Coherent averaging &amp; calibration</li>
+            <li>GPU-accelerated DSP (CuPy)</li>
           </ul>
         </div>
 
         <div class="skills-card fade-in">
           <div class="skills-card__icon"><i class="fas fa-code"></i></div>
-          <h3>Programming &amp; Simulation</h3>
+          <h3>Programming &amp; ML</h3>
           <ul>
             <li>Python (NumPy, CuPy, pandas)</li>
             <li>MATLAB</li>
@@ -560,19 +581,6 @@
             <li>Scikit-learn</li>
             <li>Sionna Ray Tracing</li>
             <li>Wireless InSite</li>
-          </ul>
-        </div>
-
-        <div class="skills-card fade-in">
-          <div class="skills-card__icon"><i class="fas fa-microchip"></i></div>
-          <h3>Hardware &amp; Lab</h3>
-          <ul>
-            <li>USRP X300 / B200 radios</li>
-            <li>60 GHz phased arrays</li>
-            <li>Power amplifiers / LNAs</li>
-            <li>Bandpass filters</li>
-            <li>GPSDO synchronization</li>
-            <li>Indoor/outdoor testbed setup</li>
           </ul>
         </div>
 
