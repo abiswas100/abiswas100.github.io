@@ -658,7 +658,8 @@ h1, h2, h3, h4 {
   color: var(--blue);
 }
 
-.pub-item__type--conference {
+.pub-item__type--conference,
+.pub-item__type--accepted {
   background: rgba(39, 174, 96, 0.1);
   color: #27ae60;
 }
